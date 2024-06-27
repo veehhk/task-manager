@@ -1,0 +1,20 @@
+{
+  "name": "task-manager",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Task Manager powered by NestJS and Vue.js",
+  "author": "Harihara Krishnan",
+  "license": "GPL-3.0-only",
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "start:api": "npm --workspace api run start",
+    "start:app": "npm --workspace app run serve",
+    "start": "concurrently \"npm run start:api\" \"npm run start:app\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
